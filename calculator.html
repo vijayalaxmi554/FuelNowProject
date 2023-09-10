@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="login.css" />
+
+    <script>
+       
+        function multiply(){
+            num1=document.getElementById("quantity").value;
+            document.getElementById("demo").innerHTML=num1*111.62;
+        }
+    </script>
+    <style>
+        .calculator{
+            display: block;
+            justify-content:flex-end;
+            margin: auto;
+            border: 1px solid black;
+            align-self: center;
+            width: 50%;
+            padding: 0px 0px 10px 0px;
+            text-align: center;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <div class="homeimg" style="align-items: center;">
+          <header>
+            <div class="navbar">
+              <div class="logo">
+                <div class="nav-logo"></div>
+                <div class="navtitle">
+                  <p class="Heading">Fuel Now</p>
+                  <p class="subtitle">
+                    On time,<br />
+                    Every time
+                  </p>
+                </div>
+              </div>
+              <div class="nav-options">
+                <div class="option border" style="border:1px solid white;"><a href="Home.html">Home</a></div>
+                <div class="option border"><a href="about.html">About</a></div>
+                <div class="option border"><a href="customerservice.html">Service</a></div>
+                <div class="option border"><a href="order.html">Order</a></div>
+                <div class="option cart border"><a href="profile.html" ><i class="fa-solid fa-user" style="color: #f5f8ff;"></i></a></div>
+                <div class="option cart border">
+                 <a href="cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="option border location">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+              </div>
+            </div>
+          </header>
+   <div class="calculator">
+    <form action=""> <label for="quantity">Quantity(in litres):</label><input type="text" id="quantity" class="quantity"><br>
+        <label for="price">Price Per Litre: 111.62</label><br>
+        <input type="button" onclick="multiply()" value="Enter">
+        <p><b>Total cost</b> </p><span id="demo"></span></form>
+        <button onclick="window.location.href='pay.html'">Pay Now</button>
+   </div>
+   <footer class="footer" style="align-self: flex-end;">
+    <div class="footer__addr">
+      <h1 class="footer__logo">Something</h1>
+          
+      <h2>Contact</h2>
+      
+      
+    </div>
+    
+    <ul class="footer__nav">
+      <li class="nav__item">
+        <h2 class="nav__title">Media</h2>
+  
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Online</a>
+          </li>
+  
+          <li>
+            <a href="#">Print</a>
+          </li>
+              
+          <li>
+            <a href="#">Alternative Ads</a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="nav__item nav__item--extra">
+        <h2 class="nav__title">Technology</h2>
+        
+        <ul class="nav__ul nav__ul--extra">
+          <li>
+            <a href="#">Hardware Design</a>
+          </li>
+          
+          <li>
+            <a href="#">Software Design</a>
+          </li>
+          
+          <li>
+            <a href="#">Digital Signage</a>
+          </li>
+          
+          <li>
+            <a href="#">Automation</a>
+          </li>
+          
+          <li>
+            <a href="#">Artificial Intelligence</a>
+          </li>
+          
+          <li>
+            <a href="#">IoT</a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="nav__item">
+        <h2 class="nav__title">Legal</h2>
+        
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+          
+          <li>
+            <a href="#">Terms of Use</a>
+          </li>
+          
+          <li>
+            <a href="#">Sitemap</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    
+    <div class="legal">
+      <p>&copy; 2023 Something. All rights reserved.</p>
+      
+      <div class="legal__links">
+        <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

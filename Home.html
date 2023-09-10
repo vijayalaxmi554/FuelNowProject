@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="service.css">
+  <style>
+    .homeimg {
+      background-image: url(fuelbackground.jpg);
+
+      height: 450px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+
+    }
+
+
+
+
+    /* The popup form - hidden by default */
+    .form-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
+    }
+
+    /* Add styles to the form container */
+    .form-container {
+      max-width: 300px;
+      padding: 10px;
+      background-color: white;
+    }
+
+    form {
+      border: 3px solid #f1f1f1;
+      font-family: Arial;
+    }
+
+    .container {
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
+
+    input[type=text],
+    input[type=submit] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    input[type=checkbox] {
+      margin-top: 16px;
+    }
+
+
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      border: none;
+    }
+
+    input[type=submit]:hover {
+      opacity: 0.8;
+    }
+    
+    .map{
+      height: 600px;
+      width: 100%;
+      align-items: center;
+      justify-content: space-evenly;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Full-width input fields */
+  </style>
+</head>
+
+<body>
+  <div class="homeimg" style="align-items: center;">
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <div class="nav-logo"></div>
+          <div class="navtitle">
+            <p class="Heading">Fuel Now</p>
+            <p class="subtitle">
+              On time,<br />
+              Every time
+            </p>
+          </div>
+        </div>
+        <div class="nav-options">
+          <div class="option border" style="border:1px solid white;"><a href="Home.html">Home</a></div>
+          <div class="option border"><a href="about.html">About</a></div>
+          <div class="option border"><a href="customerservice.html">Service</a></div>
+          <div class="option border"><a href="order.html">Order</a></div>
+          <div class="option cart border"><a href="profile.html" ><i class="fa-solid fa-user" style="color: #f5f8ff;"></i></a></div>
+          <div class="option cart border">
+           <a href="cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+          
+        </div>
+      </div>
+    </header>
+    <div class="welcome">
+      <marquee behaviour="Repeat" direction="right"
+        style="color: black;font-family: Arial, Helvetica, sans-serif;font-weight: 700; font-size: 1.5rem;margin-left: 3px;">
+        Welcome to Fuel Now!</marquee>
+    </div>
+    <div class="msg"
+      style="background-color: rgb(69, 98, 109);margin-left: 20px;margin-right: 20px;border-radius: 10px;justify-content: flex-end;">
+
+      
+
+    </div>
+  </div>
+  <hr style="margin: 20px;">
+  <div class="slider">
+    <div class="slide-track">
+        <div class="slide"><img src="img1.jpg"></div>
+        <div class="slide"><img src="img2.jpg"></div>
+        <div class="slide"><img src="img3.jpg"></div>
+        <div class="slide"><img src="img4.jpg"></div>
+        <div class="slide"><img src="img5.jpg"></div>
+        <div class="slide"><img src="img6.jpg"></div>
+        <div class="slide"><img src="img7.jpg"></div>
+        <div class="slide"><img src="img8.jpg"></div>
+        <div class="slide"><img src="img9.jpg"></div>
+     <!--same 9 slides-->
+     <div class="slide"><img src="img1.jpg"></div>
+        <div class="slide"><img src="img2.jpg"></div>
+        <div class="slide"><img src="img3.jpg"></div>
+        <div class="slide"><img src="img4.jpg"></div>
+        <div class="slide"><img src="img5.jpg"></div>
+        <div class="slide"><img src="img6.jpg"></div>
+        <div class="slide"><img src="img7.jpg"></div>
+        <div class="slide"><img src="img8.jpg"></div>
+        <div class="slide"><img src="img9.jpg"></div>
+        
+
+
+        
+        
+    </div>
+</div>
+  <div class="homecontent"
+    style="justify-content: space-evenly;align-items: center;display: flex;background-color: #18f9ae;height: 40px;width: 80%;font-size: 1.7rem;font-family: Arial, Helvetica, sans-serif;font-weight: 600;margin: auto;padding: 10px;">
+
+
+    <div class="newsletter" >
+      <button class="open-button" onclick="Subscribe()"
+        style="color: rgb(0, 78, 13);height: 30px;font-size: 1.5rem;font-family: Arial, Helvetica, sans-serif;font-weight: 600;text-align: center;">Subscribe
+        to our NewsLetter</button>
+
+      <div class="form-popup" id="myForm">
+        <form action="" class="form-container">
+          <div class="container" style="align-items: center;display: flex;justify-content: flex-end;">
+            <button type="button" class="btn cancel" onclick="closeForm()" style=" 
+              background-color: rgba(255, 0, 0, 0.664);color: white;font-weight: 700;float:right;
+            ">x</button>
+          </div>
+
+          <div class="container" style="background-color:white">
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="text" placeholder="Email address" name="mail" required>
+            <label>
+              <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+            </label>
+
+          </div>
+
+          <div class="container">
+            <input type="submit" value="Subscribe">
+          </div>
+        </form>
+      </div>
+    </div>
+    
+  </div>
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d486416.9544780044!2d82.93291425184991!3d17.738396962677896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39431389e6973f%3A0x92d9c20395498468!2sVisakhapatnam%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1694003399746!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <footer class="footer">
+    <div class="footer__addr">
+      <h1 class="footer__logo">Something</h1>
+          
+      <h2>Contact</h2>
+      
+      
+    </div>
+    
+    <ul class="footer__nav">
+      <li class="nav__item">
+        <h2 class="nav__title">Media</h2>
+  
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Online</a>
+          </li>
+  
+          <li>
+            <a href="#">Print</a>
+          </li>
+              
+          <li>
+            <a href="#">Alternative Ads</a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="nav__item nav__item--extra">
+        <h2 class="nav__title">Technology</h2>
+        
+        <ul class="nav__ul nav__ul--extra">
+          <li>
+            <a href="#">Hardware Design</a>
+          </li>
+          
+          <li>
+            <a href="#">Software Design</a>
+          </li>
+          
+          <li>
+            <a href="#">Digital Signage</a>
+          </li>
+          
+          <li>
+            <a href="#">Automation</a>
+          </li>
+          
+          <li>
+            <a href="#">Artificial Intelligence</a>
+          </li>
+          
+          <li>
+            <a href="#">IoT</a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="nav__item">
+        <h2 class="nav__title">Legal</h2>
+        
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+          
+          <li>
+            <a href="#">Terms of Use</a>
+          </li>
+          
+          <li>
+            <a href="#">Sitemap</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    
+    <div class="legal">
+      <p>&copy; 2023 Something. All rights reserved.</p>
+      
+      <div class="legal__links">
+        <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script>
+  function Subscribe() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+
+</script>
+
+</html>
